@@ -7,12 +7,11 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
 /* exemplo criando um DTO usando a record
-   no DTO sao expostas apenas as propriedades necessarias
+   nos DTO sao expostas apenas as propriedades necessarias,
    id porque e necessario para busca um objeto especifico e atualizar um ojeto especifico e deletar um objeto especifico
    nome e categoria: necessario para para criar um objeto ou atulizar
-   o status nao e necessario por que ele criado pelo sistema e vai mudar automaticamente de acordo com a acao feita na api
-   as anotacoes de persistencia no banco de dados nao adicionadas
-   sao adicionadas apenas a validadcoes */
+   o status nao e necessario por que ele e criado pelo sistema e vai mudar automaticamente de acordo com a acao feita na api
+   as anotacoes de persistencia no banco de dados nao sao adicionadas, sao adicionadas apenas a validadcoes */
 
 public record DTORecord(@NotNull Long id,
 

@@ -1,8 +1,11 @@
 package br.com.teste.dto.dto.mapper;
 
+import org.springframework.stereotype.Component;
+
 import br.com.teste.dto.dto.DTORecord;
 import br.com.teste.dto.model.Entidade;
 
+@Component
 public class Mapper {
 
 	public DTORecord toDo(Entidade entidade) {

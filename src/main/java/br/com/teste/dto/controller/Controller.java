@@ -40,8 +40,8 @@ public class Controller {
 	}
 
 	@PutMapping("/{id}")
-	public DTORecord updadte(@RequestBody DTORecord record) {
-		return service.update(record);
+	public DTORecord updadte(@PathVariable Long id, @RequestBody DTORecord record) {
+		return service.update(id, record);
 	}
 
 	@DeleteMapping("/{id}")

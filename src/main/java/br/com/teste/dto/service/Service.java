@@ -34,7 +34,7 @@ public class Service {
 	@PostMapping
 	public DTORecord create(DTORecord record) {
 		/*
-		 * transforma a instancia dto em uma entidade para salvar no banco, depois pego
+		 * transforma a instancia dto em uma entidade para salvar no banco, depois pega
 		 * o retorno que e do tipo endidade e transforma em um dto para poder retornar
 		 * um dto
 		 */
@@ -42,8 +42,8 @@ public class Service {
 	}
 
 	@PutMapping
-	public DTORecord update(DTORecord record) {
-		return repository.findById(record.id()).map(recordFound -> {
+	public DTORecord update(Long id, DTORecord record) {
+		return repository.findById(id).map(recordFound -> {
 			recordFound.setNome(record.nome());
 			recordFound.setCategoria(record.categoria());
 			return mapper.toDo(repository.save(recordFound));
