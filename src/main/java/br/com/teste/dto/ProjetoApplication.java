@@ -20,7 +20,8 @@ public class ProjetoApplication {
 		return args -> {
 			repository.deleteAll();
 			Entidade entidade = new Entidade();
-			entidade.setNome("ricardo");
+			entidade.setNome("Angular");
+			entidade.setCategoria("Front-End");
 			repository.save(entidade);
 		};
 	}

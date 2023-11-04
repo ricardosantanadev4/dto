@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.teste.dto.model.Entidade;
+import br.com.teste.dto.dto.DTORecord;
 import br.com.teste.dto.service.Service;
 
 @RestController
@@ -25,25 +25,22 @@ public class Controller {
 	}
 
 	@GetMapping
-	public List<Entidade> list() {
+	public List<DTORecord> list() {
 		return service.list();
 	}
 
 	@GetMapping("/{id}")
-	public Entidade findById(@PathVariable Long id) {
-		System.out.println("findById()");
+	public DTORecord findById(@PathVariable Long id) {
 		return service.findById(id);
 	}
 
 	@PostMapping
-	public Entidade create(@RequestBody Entidade record) {
-		System.out.println("create()");
+	public DTORecord create(@RequestBody DTORecord record) {
 		return service.create(record);
 	}
 
 	@PutMapping("/{id}")
-	public Entidade updadte(@RequestBody Entidade record) {
-		System.out.println("update()");
+	public DTORecord updadte(@RequestBody DTORecord record) {
 		return service.update(record);
 	}
 
